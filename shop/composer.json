@@ -60,7 +60,8 @@
         "shopware/core": "~v6.4.0",
         "shopware/elasticsearch": "~v6.4.0",
         "shopware/recovery": "~v6.4.0",
-        "shopware/storefront": "~v6.4.0"
+        "shopware/storefront": "~v6.4.0",
+        "symfony/dotenv": "^5.4"
     },
     "require-dev": {
         "ext-openssl": "*",

@@ -4,14 +4,9 @@ services:
   shop:
     image: dockware/essentials:latest
     container_name: my_shop
-    command: 'sudo chown www-data:www-data /var/www/html -R'
+    command: 'composer install --no-scripts'
     volumes:
       - "./shop:/var/www/html/"
-      # ...excluding shopware default directories prod-dev
-#      - "/var/www/html/.git/"
-#      - "/var/www/html/public/build"
-#      - "/var/www/html/var/cache"
-#      - "/var/www/html/vendor"
     ports:
       - "80:80"
       - "23:22"
