@@ -3,8 +3,10 @@ version: "3"
 services:
   shop:
     image: dockware/essentials:latest
+#    build: .
     container_name: my_shop
-    command: 'composer install --no-scripts'
+#    command: 'composer install --no-scripts'
+#    entrypoint: 'bin/entrypoint.sh'
     volumes:
       - "./shop:/var/www/html/"
     ports:
