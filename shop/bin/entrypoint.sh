@@ -21,7 +21,7 @@ echo "----------------------------------"
 echo "$statusDateTime Install new system"
 echo "----------------------------------"
 
-bin/console "system:install --basic-setup --shop-name='$SHOP_NAME' --shop-locale='$SHOP_LOCALE'  --shop-currency='$SHOP_CURRENCY' --force --create-database"
+bin/console system:install --basic-setup --shop-name="$SHOP_NAME" --shop-locale="$SHOP_LOCALE"  --shop-currency="$SHOP_CURRENCY" --force --create-database
 
 
 echo "----------------------------------"
