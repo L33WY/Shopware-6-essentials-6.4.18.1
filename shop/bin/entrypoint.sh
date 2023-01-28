@@ -8,6 +8,7 @@ echo "----------------------------------"
 
 composer install --no-scripts
 
+. ./bin/read-env-variables.sh
 
 echo "----------------------------------"
 echo "$statusDateTime Ensure correct file owner"
@@ -20,7 +21,7 @@ echo "----------------------------------"
 echo "$statusDateTime Install new system"
 echo "----------------------------------"
 
-bin/console system:install --basic-setup --shop-name='Test Shop' --shop-locale='pl-PL'  --shop-currency='PLN' --force --create-database
+bin/console "system:install --basic-setup --shop-name='$SHOP_NAME' --shop-locale='$SHOP_LOCALE'  --shop-currency='$SHOP_CURRENCY' --force --create-database"
 
 
 echo "----------------------------------"
